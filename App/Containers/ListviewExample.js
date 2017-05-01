@@ -6,26 +6,26 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 
 
 const dataObjects = [
-  {title: 'First Title', description: '5 PLN'},
-  {title: 'Second Title', description: '20 PLN'},
-  {title: 'Third Title', description: '14 PLN'},
-  {title: 'Fourth Title', description: '22 PLN'},
-  {title: 'Fifth Title', description: '13 PLN'},
-  {title: 'Sixth Title', description: '20 PLN'},
-  {title: 'Seventh Title', description: '35 PLN'},
-  {title: 'Eighth Title', description: '45 PLN'},
-  {title: 'Ninth Title', description: '23 PLN'},
-  {title: 'Tenth Title', description: '67 PLN'},
-  {title: 'Eleventh Title', description: '20 PLN'},
-  {title: '12th Title', description: '20 PLN'},
-  {title: '13th Title', description: '12 PLN'},
-  {title: '14th Title', description: '50 PLN'},
-  {title: '15th Title', description: '50 PLN'},
-  {title: '16th Title', description: '23 PLN'},
-  {title: '17th Title', description: '50 PLN'},
-  {title: '18th Title', description: '50 PLN'},
-  {title: '19th Title', description: '12 PLN'},
-  {title: '20th Title', description: '50 PLN'}
+  {title: 'Łajek Łajkowski', description: '5 PLN'},
+  {title: 'Łajek Łajkowski', description: '20 PLN'},
+  {title: 'Łajek Łajkowski', description: '14 PLN'},
+  {title: 'Łajek Łajkowski', description: '22 PLN'},
+  {title: 'Łajek Łajkowski', description: '13 PLN'},
+  {title: 'Łajek Łajkowski', description: '20 PLN'},
+  {title: 'Łajek Łajkowski', description: '35 PLN'},
+  {title: 'Łajek Łajkowski', description: '45 PLN'},
+  {title: 'Łajek Łajkowski', description: '23 PLN'},
+  {title: 'Łajek Łajkowski', description: '67 PLN'},
+  {title: 'Łajek Łajkowski', description: '20 PLN'},
+  {title: 'Łajek Łajkowski', description: '20 PLN'},
+  {title: 'Łajek Łajkowski', description: '12 PLN'},
+  {title: 'Łajek Łajkowski', description: '50 PLN'},
+  {title: 'Łajek Łajkowski', description: '50 PLN'},
+  {title: 'Łajek Łajkowski', description: '23 PLN'},
+  {title: 'Łajek Łajkowski', description: '50 PLN'},
+  {title: 'Łajek Łajkowski', description: '50 PLN'},
+  {title: 'Łajek Łajkowski', description: '12 PLN'},
+  {title: 'Łajek Łajkowski', description: '50 PLN'}
 ];
 
 class ListviewExample extends React.Component {
