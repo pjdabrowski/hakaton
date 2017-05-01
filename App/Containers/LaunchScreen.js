@@ -1,37 +1,60 @@
-import React from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
-import { Button, Text as NBText } from 'native-base'
-import { Images } from '../Themes'
-
-// Styles
-import styles from './Styles/LaunchScreenStyles'
+import React from "react";
+import { View } from "react-native";
+import {Label, Container, Header, Content, Title, Button, Left, Right, Body, Icon} from "native-base";
+import Camera from "react-native-camera";
+import styles from "./Styles/LaunchScreenStyles";
 
 export default class LaunchScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cameraType: Camera.constants.Type.back,
+      showCamera: true,
+      code: {}
+    }
+  }
 
-  render () {
+  render() {
     return (
-      <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-        <ScrollView style={styles.container}>
-          <View style={styles.centered}>
-            <Image source={Images.launch} style={styles.logo} />
+      <Container >
+        <Header>
+          <Left>
+            <Button transparent onPress={()=> this.context.drawer.open()}>
+              <Icon name="ios-menu"/>
+            </Button>
+          </Left>
+          <Body style={{flex: 3}}>
+          <Title>Scan test</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content padder>
+          <View >
+            <Camera
+              style={styles.preview}
+              onBarCodeRead={this.getCode.bind(this)}>
+              <View style={styles.rectangleContainer}>
+                <View style={styles.rectangle}/>
+              </View>
+            </Camera>
+            <Label>{this.state.code.data}</Label>
+            <Label>{this.state.code.data ? this.state.code.data.bounds : ""}</Label>
+            <Label>{this.state.code.type}</Label>
           </View>
+        </Content>
+      </Container>
 
-          <View style={styles.section} >
-            <Image source={Images.ready} />
-            <Text style={styles.sectionText}>
-              {"This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite."}
-            </Text>
-          </View>
-          <Button style={{alignSelf: 'center'}} onPress={()=> this.context.drawer.open()}>
-            <NBText>Explore!</NBText>
-          </Button>
-        </ScrollView>
-      </View>
     )
+  }
+
+  getCode(code) {
+    this.setState({
+      showCamera: false,
+      code: code
+    });
   }
 }
 
 LaunchScreen.contextTypes = {
   drawer: React.PropTypes.object
-}
+};
