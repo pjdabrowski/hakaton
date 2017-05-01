@@ -18,10 +18,10 @@ class NavigationRouter extends Component {
     return (
       <Router>
         <Scene key='drawer' component={NavigationDrawer} open={false}>
-          <Scene initial key='login' component={Login} title='Login' />
-          <Scene key='launchScreen' component={LaunchScreen} title='LaunchScreen' />
-          <Scene key='listViewExample' component={ListviewExample}/>
-          <Scene key='cardExample' component={CardExample}/>
+          <Scene initial key='login' component={Login} title='Login'  duration={400}/>
+          <Scene key='launchScreen' component={LaunchScreen} title='LaunchScreen'  duration={400}/>
+          <Scene key='listViewExample' component={ListviewExample}  duration={400}/>
+          <Scene key='cardExample' component={CardExample}  duration={400}/>
         </Scene>
       </Router>
     )

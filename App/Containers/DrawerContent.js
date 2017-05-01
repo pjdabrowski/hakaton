@@ -28,11 +28,14 @@ class DrawerContent extends Component {
       <View style={styles.container}>
         <Image source={Images.logoDark} style={styles.logo} />
         <Content>
+          <ListItem onPress={()=> {NavigationActions.launchScreen();this.context.drawer.close()}}>
+            <Text>Scan code</Text>
+          </ListItem>
           <ListItem onPress={()=> {NavigationActions.listViewExample();this.context.drawer.close()}}>
-            <Text>List example</Text>
+            <Text>Donation history</Text>
           </ListItem>
           <ListItem onPress={()=> {NavigationActions.cardExample();this.context.drawer.close()}}>
-            <Text>Card example</Text>
+            <Text>Favourites</Text>
           </ListItem>
         </Content>
       </View>

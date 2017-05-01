@@ -16,7 +16,7 @@ class CardExample extends React.Component {
             </Button>
           </Left>
           <Body style={{flex: 3}}>
-            <Title>Card Example</Title>
+            <Title>Favourites</Title>
           </Body>
           <Right />
         </Header>
